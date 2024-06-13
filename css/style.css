@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#assessments-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+#assessments-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #333;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-item {
+  padding: 20px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: white;
+  border: 4px solid #333;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 6px;
+  background-color: #333;
+  top: 0;
+  right: -3px;
+  z-index: -1;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-item:nth-child(even)::after {
+  left: -13px;
+}
+
+.timeline-date {
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: -140px; /* Adjusted spacing */
+  text-align: center;
+  border-radius: 6px;
+  z-index: 2; /* Ensure date is on top */
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background: white;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.timeline-content p {
+  margin-bottom: 0;
+}
+/* Container holding the image and the magnifier glass: */
+.business-item-img {
+  position: relative;
+  display: inline-block;
+}
+
+/* The magnifying glass lens: */
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /* Adjust the lens size */
+  width: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.3); /* Lens visibility */
+  cursor: none; /* Hide the default cursor */
+}
+
+/* Styles for the zoomed image */
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  width: 300px; /* Set the size of the zoomed image */
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  margin-top: 20px; /* Adjust the margin as needed */
+}
+/* Example CSS */
+.bigger-image {
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure it doesn't exceed its container */
+  display: block; /* Ensures the image behaves properly */
+}
+.small-heading {
+    font-size: 24px;/* desired size here */;
+}
